@@ -1,0 +1,54 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("./header.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.center {
+  display: flex;
+  justify-content: center;
+
+  align-content: center;
+  align-items: center;
+}
+
+.baner {
+  padding-top: 13%;
+  align-self: center;
+}
+
+.call-to-action {
+  margin-top: 14%;
+  align-self: center;
+  border-radius: 16px;
+  font-size: .8em;
+  background-color: #F05F44;
+  border-color: #F05F44;
+  padding: .5rem 1.5rem;
+}
+
+.baner h1 {
+  color: white;
+  font-size: 1.6em;
+}
+
+.baner h1,
+.center .call-to-action {
+  text-transform: uppercase;
+}
