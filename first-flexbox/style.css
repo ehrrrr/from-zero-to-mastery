@@ -1,8 +1,13 @@
-img {
-    width: 450px;
-    height: 300px;
-    margin: 10px;
+body {
+    margin: 0;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 h1 {
     font-family: fantasy;
     font-size: 3em;
@@ -11,8 +16,14 @@ h1 {
     width: 400px;
     text-align: center;
 }
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+
+img {
+    width: 450px;
+    height: 300px;
+    margin: 10px;
+    transition: all .6s;
+}
+
+img:hover {
+    transform: scale(1.05);
 }
