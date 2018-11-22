@@ -80,6 +80,22 @@ h1 {
 	margin-left: 10px; 
 } 
 
+.upper_body:hover .left_arm {
+	-webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
+
+.upper_body:hover .right_arm {
+	-webkit-transform: rotate(-40deg);
+    -moz-transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+    -ms-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+}
+
 .torso { 
 	width: 200px; 
 	height: 200px;
