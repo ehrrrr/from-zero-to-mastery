@@ -62,6 +62,7 @@ function addListenerAfterLiClick(event) {
     }
     if(!ul.hasChildNodes()) {
         resetBtn.disabled = true;
+        clearBtn.disabled = true;
     }
   } 
 
