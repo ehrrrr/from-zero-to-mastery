@@ -24,6 +24,7 @@ ul {
 
 ul > li {
     padding-bottom: 4px;
+    cursor: pointer;
 }
 
 button {
@@ -33,12 +34,14 @@ button {
     text-decoration: none;
     display: inline-block;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 button:disabled {
     background-color: #DDD;
     border: none;
     color: white;
+    cursor: not-allowed;
 }
 
 .done {
