@@ -18,6 +18,14 @@ input {
     padding: 8px 20px;
 }
 
+ul {
+    list-style-type: square;
+}
+
+ul > li {
+    padding-bottom: 4px;
+}
+
 button {
     border: none;
     color: white;
@@ -27,12 +35,10 @@ button {
     border-radius: 2px;
 }
 
-ul {
-    list-style-type: square;
-}
-
-ul > li {
-    padding-bottom: 4px;
+button:disabled {
+    background-color: #DDD;
+    border: none;
+    color: white;
 }
 
 .done {
@@ -45,7 +51,46 @@ ul > li {
     padding: 2px 5px;
 }
 
+.deleteBtn:hover {
+    background-color: rgba(255, 0, 0, 0.603);
+}
+
 #todoBtn {
     background-color: green;
     padding: 10px 20px;
+}
+
+#todoBtn:hover {
+    background-color: rgb(0, 180, 0);
+}
+
+.secBtn {
+    font-size: 0.7em;
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 3px 15px;
+}
+
+.resetBtn {
+    color: red;
+    border: 1px solid rgba(255, 0, 0, 0.555);
+}
+
+.resetBtn:hover:enabled {
+    background-color: rgba(255, 0, 0, 0.603);
+    color: white;
+    border: none;
+    padding: 4px 16px;
+}
+
+.clearBtn {
+    color: orange;
+    border: 1px solid orange;
+}
+
+.clearBtn:hover:enabled {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 4px 16px;
 }

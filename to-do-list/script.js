@@ -1,12 +1,8 @@
 var button = document.getElementById("todoBtn");
+var resetBtn = document.getElementById("resetBtn");
+var clearBtn = document.getElementById("clearBtn");
 var input = document.getElementById("todoInput");
 var ul = document.getElementById("todoList");
-
-
-
-function isFilledIn() {
-    return (input.value.length > 0) ? true : false 
-}
 
 
 function deleteElement(event) {
@@ -22,17 +18,23 @@ function createDeleteBtn() {
 }
 
 function createListElement() {
-	var li = document.createElement("li");
-    li.appendChild(document.createTextNode(todoInput.value));
+    var li = document.createElement("li");
+    var span = document.createElement("span");
+    span.appendChild(document.createTextNode(todoInput.value));
+    li.appendChild(span);
     li.appendChild(createDeleteBtn());
     ul.appendChild(li);
     //ul.appendChild(createDeleteBtn());
     todoInput.value = "";
+    resetBtn.disabled = false;
 }
 
+function isFilledIn() {
+    return (input.value.length > 0) ? true : false 
+}
 
 function addListAfterClick() {
-	if (isFilledIn()) {
+    if (isFilledIn()) {
         createListElement();
 	}
 }
@@ -44,15 +46,35 @@ function addListAfterKeypress(event) {
 }
 
 function addListenerAfterLiClick(event) {
-    if (event.target && event.target.matches("li")) {
-        if(event.target.matches("li.done")) {
+    if (event.target && event.target.matches("span")) {
+        if(event.target.matches("span.done")) {
             event.target.classList.remove("done");
         } else {
             event.target.className = "done"; // new class name here
+            clearBtn.disabled = false;
         }
     }
   }
 
+  function resetList() {
+    while (ul.firstChild) {
+        ul.removeChild(ul.firstChild);
+    }
+    if(!ul.hasChildNodes()) {
+        resetBtn.disabled = true;
+    }
+  } 
+
+  function clearList() {
+    var marked = ul.getElementsByClassName("done");
+    var arrayLength = marked.length;
+ 
+    while(arrayLength) {
+        ul.removeChild(marked[arrayLength-1].parentNode);
+        arrayLength--;
+    }
+    clearBtn.disabled = true;
+  }
 
 button.addEventListener("click", addListAfterClick);
 
@@ -60,3 +82,6 @@ input.addEventListener("keypress", addListAfterKeypress);
 
 ul.addEventListener("click", addListenerAfterLiClick);
 
+resetBtn.addEventListener("click", resetList);
+
+clearBtn.addEventListener("click", clearList);
