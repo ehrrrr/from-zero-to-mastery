@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+section {
+    background-color:#FFF;
+    padding: 1% 5%;
+}
+
+input {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 8px 20px;
+}
+
+button {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul > li {
+    padding-bottom: 4px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+.deleteBtn {
+    background-color: red;
+    display: inline;
+    margin-left: 10px;
+    padding: 2px 5px;
+}
+
+#todoBtn {
+    background-color: green;
+    padding: 10px 20px;
+}
